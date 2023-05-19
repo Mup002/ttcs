@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+.navbar{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: 100px;
+    z-index:9;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.brand-logo{
+    height: 10%;
+    width: 10%;
+    position: relative;
+    display:inline-block;
+}
+.brand-logo img{
+    width: 50px;
+}
+.nav-items{
+    width: 90%;
+    display:flex;
+
+    align-items:center;
+}
+.menu{
+    width: 50%;
+    display: inline-block;
+}
+#user-info{
+    margin-left:50%;
+}
+.links-container{
+    width: 100%;
+    display:flex;
+    justify-content: start;
+    list-style: none;
+    /* border-top:1px solid #d1d1d1; */
+}
+@media (max-width:860px){
+    .links-container{
+        display:none;
+    }
+    #user-info{
+        margin-left:80%;
+    }
+}
+.link{
+    text-transform: capitalize;
+    padding: 0 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color:#383838;
+    transition: 0.5s;
+    font-size:15px;
+   
+}
+.link:hover{
+    opacity: 1;
+}
+.icon-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#ff6426;
+    width: 25%;
+    height: 50px;
+    align-items: center;
+    border-radius: 50px;
+    color:aliceblue;
+}
+/* .search{
+    width: 30%;
+    display:flex;
+}
+.search-box{
+    padding-left:10px;
+    width: 80%;
+    height: 40px;
+    border-top-left-radius:10px ;
+    border-bottom-left-radius:10px ;
+    border: 1px solid #d1d1d1;
+    text-transform: capitalize;
+    background: none;
+    color:#a9a9a9;
+    outline:none;
+}
+.search-btn{
+    width: 20%;
+    height: 40px;
+    padding:10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ff6426;
+    color:#fff;
+    text-transform: capitalize;
+    font-size:15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box::placeholder{
+    color:#a9a9a9;
+} */
+.nav-items a{
+    margin-left:20px;
+    position: relative;
+    width: 5%;
+}
+.nav-items a img{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.login-logout-popup{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    padding:10px;
+    background: #fff;
+    border-radius: 10px;
+    top:40px;
+    width: 200px;
+    transition: .5s;
+    border:2px solid #f5f5f5;
+}
+.login-logout-popup::after{
+    content :'';
+    position: absolute;
+    top:-7.5px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 5px;
+}
+.account-info{
+    font-size:20px;
+    text-transform: capitalize;
+}
+
+#user-btn{
+    padding: 10px;
+    background: #ff6426;
+    color:#FFf;
+    border:none;
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    margin-top:20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+.dropdown .dropdown-menu {
+    border: 0px solid rgba(0, 0, 0, 0.15) !important;
+    background-color: #fafafa;
+  }
+
+.dropdown-menu {
+    transition: all 0.5s;
+    overflow: hidden;
+    transform-origin: top center;
+    transform: scale(1, 0);
+    display: block;
+    margin-top: 18px;
+  }
+.dropdown-menu .dropdown-item {
+    font-size: 14px;
+    padding: 9px 18px !important;
+    font-family: "Lora", serif;
+  }
+.dropdown:hover .dropdown-menu {
+    transform: scale(1);
+}
+@media (max-width:768px) {
+    .menu{
+        display: none;
+    }
+    .search{
+        width: 60%;
+    }
+    .icon-cart{
+        width: 30%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .link{
+        font-size: 10px;
+        padding-left:0;
+        margin: 0;
+    }
+}
+@media only screen and (min-width: 991px) and (max-width: 1200px){
+    .link{
+        font-size: 12px;
+        padding-left:5px;
+        margin: 0;
+    }
+}

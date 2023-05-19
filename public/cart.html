@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel = "stylesheet" href ="./css/cart.css">
+    <script src="https://kit.fontawesome.com/cf9a948e18.js" crossorigin="anonymous"></script>
+   
+    <link rel = "stylesheet" href = "css/pro.css">
+  
+  
+</head>
+<body onload = "loaddatacart()">
+  <section class = "product-header">
+    <div class="container">
+      <nav class="navbar">
+          <div class="navbar__logo" >
+            <img src = "img/logo-mup.png" id = "btn-img" >
+            <div class = "nav-header">
+              <ul class = "uls">
+                <li><a href = "/">Home</a></li>
+                <li><a href = "/about">About</a></li>
+              
+                <li class="link-item dropdown">
+                  <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sản phẩm
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/ukiyo">Ukiyo</a>
+                      <a class="dropdown-item" href="/sanji">Sanji</a>
+                      <a class="dropdown-item" href="/mabu">Mabu</a>
+                      <a class="dropdown-item" href="/meat">MeatZero</a>
+                      <a class="dropdown-item" href="/drink">DDrinks</a>
+                      <a class="dropdown-item" href="/mup">Mup</a>
+                  </div>
+              </li>
+              </ul>
+            </div>
+          </div>
+          <div class ="icon-cart">
+             <i class = "fa fa-shopping-cart" style = "font-size:14px"></i>Giỏ hàng: <span id = "slsp"></span>
+          </div>
+          <!-- link  -->
+      
+      </nav>
+  </div>
+    </div>
+  </section>
+  <section class = "row">
+    <div class="container">
+      <div class = "cart_left">
+     
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quality</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+          <tbody id = "info_cart">
+           
+          </tbody>
+          
+        </table>
+        <br>
+        <div class ="box-btn">
+          <button class ="btn-pro-2" onclick = "delcart()">Xóa đơn hàng</button>
+          <button class ="btn-pro-2" onclick ="order()">Xem đơn hàng</button>
+        </div>
+      </div>
+      <div class ="cart_right">
+        <h2 id = "tongdonhang"></h2>
+      </div>
+    </div>
+  </section>
+  <script src = "js/product.js"></script>
+  <script>
+    const btnImg = document.getElementById('btn-img');
+    const ulLinks = document.querySelector('.uls');
+    btnImg.addEventListener('click', ()=>{
+      ulLinks.style.display = ulLinks.style.display === "none" ? "flex" : "none";
+      
+    })
+  </script>
+
+</body>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>
